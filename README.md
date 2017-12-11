@@ -1,1 +1,1 @@
-# Nodemcu Ethernet-Telegram relay controller
+# Nodemcu Web-Telegram relay controller
