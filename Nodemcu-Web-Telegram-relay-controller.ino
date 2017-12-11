@@ -1,11 +1,4 @@
 /*******************************************************************
-    this is a basic example how to program a Telegram Bot
-    using TelegramBOT library on ESP8266
- *                                                                 *
-    Open a conversation with the bot, you can command via Telegram
-    a led from ESP8266 GPIO
-    https://web.telegram.org/#/im?p=@PattoonlineBot
- *                                                                 *
     written by Federico Adreani
  *******************************************************************/
 
