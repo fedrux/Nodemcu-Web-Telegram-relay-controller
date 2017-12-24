@@ -36,7 +36,7 @@ void loop() {
     HTTPClient http;
 
     USE_SERIAL.print("[HTTP] begin...\n");
-    http.begin("http://www.pattoonline.com/arduino/time_commander.php"); //HTTP
+    http.begin("http://www.xxxxxxxxxxxxxxxxxxxx.com/arduino/time_commander.php"); //HTTP
 
     USE_SERIAL.print("[HTTP] GET...\n");
     // start connection and send HTTP header
