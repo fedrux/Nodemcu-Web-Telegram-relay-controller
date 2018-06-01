@@ -25,7 +25,7 @@ void setup() {
     delay(1000);
   }
 
-  WiFiMulti.addAP("wifi_3", "adreaniWifi");
+  WiFiMulti.addAP("", "");
 
 }
 
