@@ -1,11 +1,4 @@
 /*******************************************************************
-    this is a basic example how to program a Telegram Bot
-    using TelegramBOT library on ESP8266
- *                                                                 *
-    Open a conversation with the bot, you can command via Telegram
-    a led from ESP8266 GPIO
-    https://web.telegram.org/#/im?p=@PattoonlineBot
- *                                                                 *
     written by Federico Adreani
  *******************************************************************/
 
@@ -68,13 +61,13 @@ const char* password = "adreaniWifi";
 
 // Initialize Telegram BOT
 
-#define BOTtoken "398215908:AAFzqHU8zwpp2zuj1iMcPCLWsY0CLGLEsfw"  //"425354869:AAFc9Z6HVVm3EJHonQoEqscSNLwMBQTSvyY"       //token of FlashledBOT
-#define BOTname "AdreaniSpruzziniController"      //"AdreaniSpruzziniController"
-#define BOTusername "AdreaniSpruzziniControllerBot"//"AdreaniSpruzziniControllerBot"
+#define BOTtoken "xx:xx"  
+#define BOTname "xxxx"      
+#define BOTusername "xxxx"
 
-const String id_proprietario = "404952185";
+const String id_proprietario = "xx";
 
-String id_scrittore_messaggio = "404952185";
+String id_scrittore_messaggio = "xx";
 
 
 TelegramBOT bot(BOTtoken, BOTname, BOTusername);
@@ -84,7 +77,7 @@ long Bot_lasttime;   //last time messages' scan has been done
 bool Start = false;
 
 String message_read;
-String wellcome = "Bentornato Fede";
+String wellcome = "Bentornato X";
 String help_msg = "Comandi: /start per avviare il sistema /Hn per accendere il pin n /Ln per spegnere il led n /cicloXX per avviare un ciclo intero di XX minuti (per stazione)   /stato per sapere lo stato generale dei pin   /Hall per accendere tutto e /Lall per spegnere tutto";
 
 String ip_esterno;
