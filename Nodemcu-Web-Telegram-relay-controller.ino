@@ -1,11 +1,4 @@
 /*******************************************************************
-    this is a basic example how to program a Telegram Bot
-    using TelegramBOT library on ESP8266
- *                                                                 *
-    Open a conversation with the bot, you can command via Telegram
-    a led from ESP8266 GPIO
-    https://web.telegram.org/#/im?p=@PattoonlineBot
- *                                                                 *
     written by Federico Adreani
  *******************************************************************/
 
@@ -62,19 +55,19 @@ float tempOutDeg = 0.0;
 float umid_aria = 0.0;
 
 
-const char* ssid = "wifi_3";
-const char* password = "adreaniWifi";
+const char* ssid = "xxx";
+const char* password = "xxx";
 
 
 // Initialize Telegram BOT
 
-#define BOTtoken "398215908:AAFzqHU8zwpp2zuj1iMcPCLWsY0CLGLEsfw"  //"425354869:AAFc9Z6HVVm3EJHonQoEqscSNLwMBQTSvyY"       //token of FlashledBOT
-#define BOTname "AdreaniSpruzziniController"      //"AdreaniSpruzziniController"
-#define BOTusername "AdreaniSpruzziniControllerBot"//"AdreaniSpruzziniControllerBot"
+#define BOTtoken "xx:xxx"  //"425354869:AAFc9Z6HVVm3EJHonQoEqscSNLwMBQTSvyY"       //token of FlashledBOT
+#define BOTname "xxx"      //"AdreaniSpruzziniController"
+#define BOTusername "xx"//"AdreaniSpruzziniControllerBot"
 
-const String id_proprietario = "404952185";
+const String id_proprietario = "xx";
 
-String id_scrittore_messaggio = "404952185";
+String id_scrittore_messaggio = "xx";
 
 
 TelegramBOT bot(BOTtoken, BOTname, BOTusername);
@@ -1047,7 +1040,7 @@ void writer(String stringa) {
 
 void get_ip_esterno() {
   HTTPClient http;
-  http.begin("http://www.pattoonline.com/arduino/arduino.php");
+  http.begin("http://www.xxxx.com/arduino/arduino.php");
 //  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
  // http.POST("title=foo&body=bar&userId=1");
   ip_esterno = http.getString();
