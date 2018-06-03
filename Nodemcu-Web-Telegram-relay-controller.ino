@@ -55,8 +55,8 @@ float tempOutDeg = 0.0;
 float umid_aria = 0.0;
 
 
-const char* ssid = "wifi_3";
-const char* password = "adreaniWifi";
+const char* ssid = "x";
+const char* password = "xx";
 
 
 // Initialize Telegram BOT
@@ -1042,7 +1042,7 @@ void writer(String stringa) {
 
 void get_ip_esterno() {
   HTTPClient http;
-  http.begin("http://www.pattoonline.com/arduino/arduino.php");
+  http.begin("http://www.xxxxxxxx.com/arduino/arduino.php");
 //  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
  // http.POST("title=foo&body=bar&userId=1");
   ip_esterno = http.getString();
