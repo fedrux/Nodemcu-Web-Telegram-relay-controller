@@ -1,4 +1,11 @@
 /*******************************************************************
+    this is a basic example how to program a Telegram Bot
+    using TelegramBOT library on ESP8266
+ *                                                                 *
+    Open a conversation with the bot, you can command via Telegram
+    a led from ESP8266 GPIO
+    https://web.telegram.org/#/im?p=@PattoonlineBot
+ *                                                                 *
     written by Federico Adreani
  *******************************************************************/
 
@@ -55,19 +62,19 @@ float tempOutDeg = 0.0;
 float umid_aria = 0.0;
 
 
-const char* ssid = "x";
-const char* password = "xx";
+const char* ssid = "wifi_3";
+const char* password = "adreaniWifi";
 
 
 // Initialize Telegram BOT
 
-#define BOTtoken "xx:xx"  
-#define BOTname "xxxx"      
-#define BOTusername "xxxx"
+#define BOTtoken "398215908:AAFzqHU8zwpp2zuj1iMcPCLWsY0CLGLEsfw"  //"425354869:AAFc9Z6HVVm3EJHonQoEqscSNLwMBQTSvyY"       //token of FlashledBOT
+#define BOTname "AdreaniSpruzziniController"      //"AdreaniSpruzziniController"
+#define BOTusername "AdreaniSpruzziniControllerBot"//"AdreaniSpruzziniControllerBot"
 
-const String id_proprietario = "xx";
+const String id_proprietario = "404952185";
 
-String id_scrittore_messaggio = "xx";
+String id_scrittore_messaggio = "404952185";
 
 
 TelegramBOT bot(BOTtoken, BOTname, BOTusername);
@@ -77,7 +84,7 @@ long Bot_lasttime;   //last time messages' scan has been done
 bool Start = false;
 
 String message_read;
-String wellcome = "Bentornato X";
+String wellcome = "Bentornato Fede";
 String help_msg = "Comandi: /start per avviare il sistema /Hn per accendere il pin n /Ln per spegnere il led n /cicloXX per avviare un ciclo intero di XX minuti (per stazione)   /stato per sapere lo stato generale dei pin   /Hall per accendere tutto e /Lall per spegnere tutto";
 
 String ip_esterno;
@@ -179,7 +186,6 @@ void Bot_ExecMessages() {
 
         writer("ciclo per i seq minuti ---> ");
         writer(String(minuti));
-        bot.message[0][0] = "";
         WiFiClient client = server.available();
         cicloSpruzzini(client, minuti);
 
@@ -726,7 +732,7 @@ void printHtmlFooter(WiFiClient client) {
   client.println("\n<h3 align=\"center\">&copy; Author - Adreani Federico <br> " + ip_esterno + " - 01/06/2018 - ");
   client.println(rev);
   client.println("</h3></div>\n</div>\n</body>\n</html>");
-  //client.println("<iframe src='http://www.pattoonline.com/arduino/arduino.php'></iframe>");
+  //client.println("<iframe src='http://www.xxxxxx.com/arduino/arduino.php'></iframe>");
 
   delay(1); // give the web browser time to receive the data
 
@@ -983,7 +989,6 @@ void checkForClient() {
 //
 void cicloSpruzzini(WiFiClient client, int durata) {
 
-  bot.message[0][0] = "";
 
   writer("inizio ciclo spruzzini --> " + String(durata));
 
@@ -1042,7 +1047,7 @@ void writer(String stringa) {
 
 void get_ip_esterno() {
   HTTPClient http;
-  http.begin("http://www.xxxxxxxx.com/arduino/arduino.php");
+  http.begin("http://www.pattoonline.com/arduino/arduino.php");
 //  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
  // http.POST("title=foo&body=bar&userId=1");
   ip_esterno = http.getString();
